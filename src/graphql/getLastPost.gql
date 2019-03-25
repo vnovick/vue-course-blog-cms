@@ -1,0 +1,14 @@
+subscription {
+  posts(order_by: {
+    timestamp:desc
+  }, limit: 1) {
+    id
+    title
+    content
+    timestamp
+    user {
+      firstName
+      lastName
+    }
+  }
+}

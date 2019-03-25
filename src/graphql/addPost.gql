@@ -1,0 +1,11 @@
+mutation addPost($subject: String, $content: String, $userId: String!){
+  insert_posts(objects: [{
+    title:$subject
+    content: $content
+    userId: $userId
+  }]) {
+    returning {
+      id
+    }
+  }
+}

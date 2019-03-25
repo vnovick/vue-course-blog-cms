@@ -1,0 +1,14 @@
+query getPosts {
+  posts(order_by: {
+    timestamp: desc
+  }) {
+    id
+    title
+    content
+    timestamp
+    user {
+      firstName
+      lastName
+    }
+  }
+}
